@@ -5,45 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
   
   <title>Frontend Mentor | Fylo data storage component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { 
-      font-size: 11px; 
+    body {
+      background-image: url(images/bg-mobile.png);
+      background-size: cover;
+      font-family: 'Raleway', sans-serif;
+      color: hsl(243, 100%, 93%);
+    }
+    .display { 
+      color: hsl(243, 100%, 93%);
       text-align: center; 
-      width: 90vw;
-      height: 50vh;
-      margin-top: 25vh;
-      margin-bottom: 25vh;
+      width: 88vw;
+      height: 60vh;
+      margin-top: 18vh;
+      margin-bottom: 22vh;
       margin-left: auto;
       margin-right: auto;
       display: grid;
       grid-template-columns: auto;
       grid-template-rows: 60% 40%;
-      row-gap: 12px;
+      row-gap: 2vh;
     }
-    .attribution a { 
+    .display a { 
       color: hsl(228, 45%, 44%); 
     }
     .topsection {
       background-color:hsl(228, 56%, 26%);
-      border-radius: 10px 70px 10px 10px;
+      border-radius: 10px 80px 10px 10px;
       height: 100%;
       grid-row: 1 / 2;
+      display: grid;
+      grid-template-columns: 10% 20% 20% 20% 10%;
+      grid-template-rows: 20% 20% 10% 20% 20%;
+    }
+    .logo {
+      grid-row: 2 / 3;
+      grid-column: 2 / 5;
+    }
+    .documenticon {
+      grid-row: 4 / 5;
+      grid-column: 2 / 3;
+      margin: auto;
+    }
+    .square1 {
+      height: 50px;
+      width: 50px;
+      background-color: hsl(229, 57%, 11%);
+      border-radius: 10px 10px 10px 10px;
+      grid-row: 4 / 5;
+      grid-column: 2 / 3;
+      margin: auto;
+    }
+    .foldericon {
+      grid-row: 4 / 5;
+      grid-column: 3 / 4;
+      margin: auto;
+    }
+    .square2 {
+      height: 50px;
+      width: 50px;
+      background-color: hsl(229, 57%, 11%);
+      border-radius: 10px 10px 10px 10px;
+      grid-row: 4 / 5;
+      grid-column: 3 / 4;
+      margin: auto;
+    }
+    .cloudicon {
+      grid-row: 4 / 5;
+      grid-column: 4 / 5;
+      margin: auto;
+    }
+    .square3 {
+      height: 50px;
+      width: 50px;
+      background-color: hsl(229, 57%, 11%);
+      border-radius: 10px 10px 10px 10px;
+      grid-row: 4 / 5;
+      grid-column: 4 / 5;
+      margin: auto;
     }
     .bottomsection {
       background-color:hsl(228, 56%, 26%);
       border-radius: 10px 10px 10px 10px;
       height: 100%;
       grid-row: 2 / 3;
-    }
-    body {
-      background-image: url(images/bg-mobile.png);
-      background-repeat: no-repeat;
-      background-size: 100% auto;
-      height: 100vh;
+      font-weight: 400;
     }
   </style>
 </head>
@@ -51,20 +102,24 @@
 
 
   
-  <div class="attribution">
+  <div class="display">
     <div class="topsection">
-
+      <img class="logo" src="images/logo.svg">
+      <span class="square1"></span>
+      <img class="documenticon" src="images/icon-document.svg">
+      <span class="square2"></span>
+      <img class="foldericon" src="images/icon-folder.svg">
+      <span class="square3"></span>
+      <img class="cloudicon" src="images/icon-upload.svg">
     </div>
     <div class="bottomsection">
-      You’ve used 815 GB of your storage
+      <p>You’ve used <b>815 GB</b> of your storage</p>
 
       185 GB Left
       
       0 GB
       1000 GB
     </div>
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Matt Stucky</a>.
   </div>
 </body>
 </html>
