@@ -98,18 +98,18 @@
       grid-row: 2 / 3;
       font-weight: 400;
       display: grid;
-      grid-template-columns: 10% 10% 60% 10% 10%;
+      grid-template-columns: 10% 80% 10%;
       grid-template-rows: 20% 20% 20% 20% 20%;
     }
     .bottomsection p {
       grid-row: 2 / 3;
-      grid-column: 2 / 5;
+      grid-column: 2 / 3;
       margin-top: 0;
       font-size: .9em;
     }
     .statusbarbase {
       grid-row: 3 / 4;
-      grid-column: 2 / 5;
+      grid-column: 2 / 3;
       background-color: hsl(229, 57%, 11%);
       border-radius: 10px 10px 10px 10px;
       z-index: 2;
@@ -118,7 +118,7 @@
     }
     .statusbarprogress {
       grid-row: 3 / 4;
-      grid-column: 2 / 5;
+      grid-column: 2 / 3;
       background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
       border-radius: 10px 10px 10px 10px;
       z-index: 3;
@@ -128,21 +128,57 @@
       margin-top: 2px;
       margin-bottom: 2px;
     }
+    .statusbarcircle {
+      grid-row: 3 / 4;
+      grid-column: 2 / 3;
+      background-color:hsl(243, 100%, 93%);
+      border-radius: 10px 10px 10px 10px;
+      z-index: 4;
+      width: 12px;
+      height: 12px;
+      margin-top: 3px;
+      margin-left: 76%;
+    }
     .statusbarleftlabel {
       grid-row: 4 / 5;
       grid-column: 2 / 3;
       font-weight: bold;
       font-size: .75em;
+      text-align: left;
     }
     .statusbarrightlabel {
       grid-row: 4 / 5;
-      grid-column: 4 / 5;
+      grid-column: 2 / 3;
       font-weight: bold;
       font-size: .75em;
+      text-align: right;
     }
     .gbleftbox {
       grid-row: 5 / 6;
+      grid-column: 2 / 3;
+      height: 70px;
+      width: 65%;
+      background-color: hsl(243, 100%, 93%);
+      border-radius: 10px 10px 10px 10px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+    .bignumber {
+      color: hsl(229, 57%, 11%);
+      font-weight: 700;
+      font-size: 2.5em;
+    }
+    .gbleft {
+      color: hsl(229, 7%, 55%);
+      font-weight: 700;
+      font-size: .8em;
+      letter-spacing: .08em;
+      margin-left: 5%;
+    }
+    /* TODO: Fix layout for iPhone 5/SE */
   </style>
 </head>
 <body>
@@ -163,6 +199,7 @@
       <p>You’ve used <b>815 GB</b> of your storage</p>
         <div class="statusbarbase"></div>
         <div class="statusbarprogress"></div>
+        <div class="statusbarcircle"></div>
       <div class="statusbarleftlabel">
         <span>0 GB</span>
       </div>
@@ -170,7 +207,7 @@
         <span>1000 GB</span>
       </div>
       <div class="gbleftbox">
-        <span>185 GB Left</span>
+        <span class="bignumber">185</span><span class="gbleft">GB LEFT</span>
       </div>
       
       
