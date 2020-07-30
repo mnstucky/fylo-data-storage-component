@@ -11,6 +11,9 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       background-image: url(images/bg-mobile.png);
       background-size: cover;
@@ -178,7 +181,7 @@
       letter-spacing: .08em;
       margin-left: 5%;
     }
-    /* @media screen and (min-width: 10px) {
+    @media screen and (min-width: 600px) {
       body {
         background-image: url(images/bg-desktop.png);
         background-position: bottom;
@@ -186,7 +189,28 @@
         background-repeat: no-repeat;
         background-color:hsl(229, 57%, 11%);
       }
-    } */
+      .display { 
+        color: hsl(243, 100%, 93%);
+        text-align: center; 
+        width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 100%;
+        column-gap: 2.5vh;
+      }
+      .topsection {
+        height: 200px;
+        width: 100%;
+      }
+      .bottomsection {
+        height: 150px;
+        width: 100%;
+        margin-top: 50px;
+      }
+    }
   </style>
 </head>
 <body>
